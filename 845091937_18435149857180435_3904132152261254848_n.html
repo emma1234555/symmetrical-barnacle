@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1020">
+<title>NEPO RISE | Crypto Portfolio Demo</title>
+<style>
+:root{--bg:#080d19;--panel:#111a2b;--panel2:#0d1525;--text:#f4f7ff;--muted:#93a1b8;--gold:#f4c66a;--teal:#49d7bd;--line:#243047;--red:#ff7f8c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#1c3150 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid #ffffff12}
+.brand{font-size:20px;font-weight:800;letter-spacing:1.5px}.brand span{color:var(--gold)}nav{display:flex;gap:24px;color:var(--muted);font-size:14px}nav a:first-child{color:var(--text)}.badge{border:1px solid #f4c66a66;color:var(--gold);padding:7px 11px;border-radius:99px;font-size:12px}
+.hero{padding:65px 0 38px;display:grid;grid-template-columns:1.2fr .8fr;gap:38px;align-items:center}.eyebrow{color:var(--teal);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+h1{font-size:clamp(36px,5vw,60px);line-height:1.06;letter-spacing:-2px;margin:15px 0}h1 em{font-style:normal;color:var(--gold)}.lead{color:var(--muted);max-width:560px;font-size:17px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;padding:12px 17px;border-radius:11px;font-weight:700;border:1px solid var(--line);background:#121d30}.btn.primary{background:var(--gold);color:#1b1b1b;border-color:var(--gold)}
+.hero-card,.card{background:linear-gradient(145deg,#152238,#0e1728);border:1px solid #ffffff12;border-radius:20px;padding:22px;box-shadow:0 18px 50px #0002}.small-label{color:var(--muted);font-size:13px}.big-number{font-size:34px;font-weight:750;margin:6px 0}.positive{color:var(--teal);font-size:13px}.chart{width:100%;height:105px;margin-top:16px}.chart svg{width:100%;height:100%}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin:28px 0 16px}.section-head h2{margin:0;font-size:22px}.section-head p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.coin{display:flex;align-items:center;gap:12px}.coin-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#ffffff0c;font-weight:800;color:var(--gold)}.coin-name{font-weight:700}.ticker{font-size:12px;color:var(--muted)}.coin-price{margin-left:auto;text-align:right;font-weight:700}.coin-change{font-size:12px}.down{color:var(--red)}
+.lower{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin:18px 0 28px}.row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}.muted{color:var(--muted)}.allocation{display:flex;height:10px;border-radius:99px;overflow:hidden;background:#263249;margin:16px 0}.allocation span:nth-child(1){width:52%;background:var(--gold)}.allocation span:nth-child(2){width:30%;background:var(--teal)}.allocation span:nth-child(3){width:18%;background:#7888ff}.legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:12px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
+.notice{background:#f4c66a10;border:1px solid #f4c66a35;color:#e7d7b0;padding:12px 14px;border-radius:12px;font-size:12px;margin:20px 0 30px}
+footer{border-top:1px solid #ffffff12;padding:22px 0 30px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:720px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:42px;gap:22px}.grid{grid-template-columns:1fr}.lower{grid-template-columns:1fr}.hero-card{padding:18px}h1{letter-spacing:-1px}.section-head{align-items:start;gap:10px;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="#"><span>◆</span> NEPO RISE</a>
+  <nav><a href="#home">Home</a><a href="#markets">Markets</a><a href="#portfolio">Portfolio</a><a href="#learn">Learn</a></nav>
+  <span class="badge">DEMO VERSION</span>
+</header>
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">A clearer view of crypto</div>
+    <h1>Your crypto,<br><em>clearly in view.</em></h1>
+    <p class="lead">Explore market movements and keep your cryptocurrency portfolio organized in one simple dashboard.</p>
+    <div class="actions"><a class="btn primary" href="#markets">Explore markets ↗</a><a class="btn" href="#portfolio">View demo portfolio</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="small-label">Demo portfolio value</div>
+    <div class="big-number">$12,480.50</div>
+    <div class="positive">+2.41% <span class="muted">illustrative 24h change</span></div>
+    <div class="chart">
+      <svg viewBox="0 0 400 110" preserveAspectRatio="none" aria-label="Illustrative portfolio chart">
+        <defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#49d7bd" stop-opacity=".3"/><stop offset="100%" stop-color="#49d7bd" stop-opacity="0"/></linearGradient></defs>
+        <path d="M0,83 C25,78 32,87 55,68 S90,78 112,55 S151,65 175,42 S210,57 236,34 S275,47 298,26 S335,43 355,17 S383,24 400,10 L400,110 L0,110 Z" fill="url(#fill)"/>
+        <path d="M0,83 C25,78 32,87 55,68 S90,78 112,55 S151,65 175,42 S210,57 236,34 S275,47 298,26 S335,43 355,17 S383,24 400,10" fill="none" stroke="#49d7bd" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="small-label">Illustrative sample data — not live prices</div>
+  </div>
+</section>
+
+<section id="markets">
+  <div class="section-head"><div><h2>Market snapshot</h2><p>Example prices for the website preview</p></div><span class="muted">Sample data only</span></div>
+  <div class="grid">
+    <article class="card"><div class="coin"><div class="coin-icon">₿</div><div><div class="coin-name">Bitcoin</div><div class="ticker">BTC</div></div><div class="coin-price">$67,240.00<div class="coin-change positive">+1.82%</div></div></div></article>
+    <article class="card"><div class="coin"><div class="coin-icon">◆</div><div><div class="coin-name">Ethereum</div><div class="ticker">ETH</div></div><div class="coin-price">$2,540.80<div class="coin-change positive">+0.94%</div></div></div></article>
+    <article class="card"><div class="coin"><div class="coin-icon">◎</div><div><div class="coin-name">Solana</div><div class="ticker">SOL</div></div><div class="coin-price">$154.20<div class="coin-change down">−0.63%</div></div></div></article>
+  </div>
+</section>
+
+<section class="lower" id="portfolio">
+  <article class="card">
+    <div class="section-head"><div><h2>Demo portfolio</h2><p>Example holdings breakdown</p></div></div>
+    <div class="row"><span class="muted">Bitcoin</span><strong>$6,489.86</strong></div>
+    <div class="row"><span class="muted">Ethereum</span><strong>$3,744.15</strong></div>
+    <div class="row"><span class="muted">Solana</span><strong>$2,246.49</strong></div>
+    <div class="allocation"><span></span><span></span><span></span></div>
+    <div class="legend"><span><i class="dot" style="background:#f4c66a"></i>Bitcoin 52%</span><span><i class="dot" style="background:#49d7bd"></i>Ethereum 30%</span><span><i class="dot" style="background:#7888ff"></i>Solana 18%</span></div>
+  </article>
+  <article class="card" id="learn">
+    <div class="section-head"><div><h2>Learn before you invest</h2><p>Simple reminders for safer decisions</p></div></div>
+    <div class="row"><span>Crypto prices can change quickly</span><span>↗</span></div>
+    <div class="row"><span>Never share passwords or recovery phrases</span><span>✓</span></div>
+    <div class="row"><span>Check fees and risks before any transaction</span><span>✓</span></div>
+    <p class="muted" style="font-size:13px;margin-bottom:0">This prototype does not connect to wallets, accept deposits, or execute trades.</p>
+  </article>
+</section>
+<div class="notice"><strong>Important:</strong> NEPO RISE is currently a visual demo. Prices and balances are illustrative, not live market data. It does not accept money, promise returns, or provide investment advice.</div>
+</main>
+<footer><span>© 2026 NEPO RISE · Crypto portfolio demo</span><span>Built for learning · No real transactions</span></footer>
+</div>
+</body>
+</html>
